@@ -6,7 +6,6 @@ import (
 	"strings"
 
 	"c-z.dev/go-micro"
-	"c-z.dev/go-micro/api/server/acme"
 	"c-z.dev/go-micro/auth"
 	bmem "c-z.dev/go-micro/broker/memory"
 	"c-z.dev/go-micro/client"
@@ -38,10 +37,6 @@ var (
 	Protocol = "grpc"
 	// The endpoint host to route to
 	Endpoint string
-	// ACME (Cert management)
-	ACMEProvider          = "autocert"
-	ACMEChallengeProvider = "cloudflare"
-	ACMECA                = acme.LetsEncryptProductionCA
 )
 
 func Run(ctx *cli.Context, srvOpts ...micro.Option) {

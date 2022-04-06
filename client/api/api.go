@@ -20,7 +20,6 @@ import (
 	"c-z.dev/go-micro/api/router"
 	regRouter "c-z.dev/go-micro/api/router/registry"
 	"c-z.dev/go-micro/api/server"
-	"c-z.dev/go-micro/api/server/acme"
 	httpapi "c-z.dev/go-micro/api/server/http"
 	log "c-z.dev/go-micro/logger"
 	"c-z.dev/micro/client/api/auth"
@@ -34,19 +33,16 @@ import (
 )
 
 var (
-	Name                  = "go.micro.api"
-	Address               = ":8080"
-	Handler               = "meta"
-	Resolver              = "micro"
-	RPCPath               = "/rpc"
-	APIPath               = "/"
-	ProxyPath             = "/{service:[a-zA-Z0-9]+}"
-	Namespace             = "go.micro"
-	Type                  = "api"
-	HeaderPrefix          = "X-Micro-"
-	EnableRPC             = false
-	ACMEChallengeProvider = "cloudflare"
-	ACMECA                = acme.LetsEncryptProductionCA
+	Name      = "go.micro.api"
+	Address   = ":8080"
+	Handler   = "meta"
+	Resolver  = "micro"
+	RPCPath   = "/rpc"
+	APIPath   = "/"
+	ProxyPath = "/{service:[a-zA-Z0-9]+}"
+	Namespace = "go.micro"
+	Type      = "api"
+	EnableRPC = false
 )
 
 func Run(ctx *cli.Context, srvOpts ...micro.Option) {

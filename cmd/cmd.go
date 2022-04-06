@@ -62,11 +62,6 @@ func setup(app *ccli.App) {
 			Name:  "local",
 			Usage: "Enable local only development: Defaults to true.",
 		},
-		&ccli.StringFlag{
-			Name:    "acme_hosts",
-			Usage:   "Comma separated list of hostnames to manage ACME certs for",
-			EnvVars: []string{"MICRO_ACME_HOSTS"},
-		},
 		&ccli.BoolFlag{
 			Name:    "enable_tls",
 			Usage:   "Enable TLS support. Expects cert and key file to be specified",

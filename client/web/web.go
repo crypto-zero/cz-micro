@@ -17,7 +17,6 @@ import (
 	"c-z.dev/go-micro"
 	res "c-z.dev/go-micro/api/resolver"
 	"c-z.dev/go-micro/api/server"
-	"c-z.dev/go-micro/api/server/acme"
 	"c-z.dev/go-micro/api/server/cors"
 	httpapi "c-z.dev/go-micro/api/server/http"
 	"c-z.dev/go-micro/auth"
@@ -55,12 +54,9 @@ var (
 	// Base path sent to web service.
 	// This is stripped from the request path
 	// Allows the web service to define absolute paths
-	BasePathHeader        = "X-Micro-Web-Base-Path"
-	statsURL              string
-	loginURL              string
-	ACMEProvider          = "autocert"
-	ACMEChallengeProvider = "cloudflare"
-	ACMECA                = acme.LetsEncryptProductionCA
+	BasePathHeader = "X-Micro-Web-Base-Path"
+	statsURL       string
+	loginURL       string
 
 	// Host name the web dashboard is served on
 	Host, _ = os.Hostname()
