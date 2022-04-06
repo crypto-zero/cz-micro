@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package go.micro.api;
+option go_package = "c-z.dev/micro/api/proto";
 
 message Pair {
 	string key = 1;

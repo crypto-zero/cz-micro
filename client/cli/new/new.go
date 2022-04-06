@@ -26,7 +26,7 @@ func protoComments(goDir, alias string) []string {
 		"\ndownload protobuf for micro:\n",
 		"go get -u github.com/golang/protobuf/proto",
 		"go get -u github.com/golang/protobuf/protoc-gen-go",
-		"go get github.com/crypto-zero/micro/v2/cmd/protoc-gen-micro",
+		"go get c-z.dev/go-micro/cmd/protoc-gen-micro",
 		"\ncompile the proto file " + alias + ".proto:\n",
 		"cd " + goDir,
 		"make proto\n",
@@ -149,7 +149,7 @@ func copyAPIProto(c config) (string, error) {
 
 	contents, err := ioutil.ReadDir(filepath.Join(basedir, "pkg", "mod", "github.com", "micro", "go-micro"))
 	if err != nil {
-		return "", errors.New("Unable to find go-micro version. Please try `go get github.com/crypto-zero/go-micro/v2`")
+		return "", errors.New("Unable to find go-micro version. Please try `go get c-z.dev/go-micro`")
 	}
 	newestDir := ""
 	for _, v := range contents {
@@ -158,7 +158,7 @@ func copyAPIProto(c config) (string, error) {
 		}
 	}
 	if newestDir == "" {
-		return "", errors.New("Unable to find go-micro version. Please try `go get github.com/crypto-zero/go-micro/v2`")
+		return "", errors.New("Unable to find go-micro version. Please try `go get c-z.dev/go-micro`")
 	}
 
 	input, err := ioutil.ReadFile(fmt.Sprintf("%s/pkg/mod/github.com/crypto-zero/go-micro/%s/api/proto/api.proto", basedir, newestDir))
@@ -312,7 +312,6 @@ func Run(ctx *cli.Context) {
 		c.Files = []file{
 			{"main.go", tmpl.MainFNC},
 			{"generate.go", tmpl.GenerateFile},
-			{"plugin.go", tmpl.Plugin},
 			{"handler/" + alias + ".go", tmpl.HandlerFNC},
 			{"subscriber/" + alias + ".go", tmpl.SubscriberFNC},
 			{"proto/" + alias + "/" + alias + ".proto", tmpl.ProtoFNC},
@@ -327,7 +326,6 @@ func Run(ctx *cli.Context) {
 		c.Files = []file{
 			{"main.go", tmpl.MainSRV},
 			{"generate.go", tmpl.GenerateFile},
-			{"plugin.go", tmpl.Plugin},
 			{"handler/" + alias + ".go", tmpl.HandlerSRV},
 			{"subscriber/" + alias + ".go", tmpl.SubscriberSRV},
 			{"proto/" + alias + "/" + alias + ".proto", tmpl.ProtoSRV},
@@ -341,7 +339,6 @@ func Run(ctx *cli.Context) {
 		c.Files = []file{
 			{"main.go", tmpl.MainAPI},
 			{"generate.go", tmpl.GenerateFile},
-			{"plugin.go", tmpl.Plugin},
 			{"client/" + alias + ".go", tmpl.WrapperAPI},
 			{"handler/" + alias + ".go", tmpl.HandlerAPI},
 			{"proto/" + alias + "/" + alias + ".proto", tmpl.ProtoAPI},
@@ -354,7 +351,6 @@ func Run(ctx *cli.Context) {
 		// create service config
 		c.Files = []file{
 			{"main.go", tmpl.MainWEB},
-			{"plugin.go", tmpl.Plugin},
 			{"handler/handler.go", tmpl.HandlerWEB},
 			{"html/index.html", tmpl.HTMLWEB},
 			{"Dockerfile", tmpl.DockerWEB},
