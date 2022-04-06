@@ -100,7 +100,7 @@ func Flags() []cli.Flag {
 	return []cli.Flag{
 		&cli.StringFlag{
 			Name:  "source",
-			Usage: "Set the source url of the service e.g github.com/crypto-zero/services",
+			Usage: "Set the source url of the service",
 		},
 		&cli.StringFlag{
 			Name:  "image",
