@@ -38,7 +38,6 @@ func (a *wrapper) Call(ctx context.Context, req client.Request, rsp interface{},
 		// get issues. To test after `micro env add mine 127.0.0.1:8081` do,
 		// `micro run github.com/crufter/micro-services/logspammer` works but
 		// `micro -env=mine run github.com/crufter/micro-services/logspammer` is broken.
-		// Related ticket https://github.com/crypto-zero/development/issues/193
 		//
 		// env := strings.ReplaceAll(a.env, "/", "-")
 		// ctx = metadata.Set(ctx, "Micro-Namespace", env)
