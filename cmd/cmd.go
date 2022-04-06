@@ -17,7 +17,6 @@ import (
 	"c-z.dev/micro/client/api"
 	"c-z.dev/micro/client/bot"
 	"c-z.dev/micro/client/cli"
-	"c-z.dev/micro/client/cli/new"
 	"c-z.dev/micro/client/cli/util"
 	"c-z.dev/micro/client/proxy"
 	"c-z.dev/micro/client/web"
@@ -291,7 +290,6 @@ func (s commands) Less(i, j int) bool {
 // Setup sets up a cli.App
 func Setup(app *ccli.App, options ...micro.Option) {
 	// Add the various commands
-	app.Commands = append(app.Commands, new.Commands()...)
 	app.Commands = append(app.Commands, runtime.Commands(options...)...)
 	app.Commands = append(app.Commands, store.Commands(options...)...)
 	app.Commands = append(app.Commands, config.Commands(options...)...)
