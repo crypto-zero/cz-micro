@@ -81,25 +81,6 @@ Boot the entire runtime environment locally
 micro server
 ```
 
-### Create a service
-
-```
-# generate a service (follow instructions in output)
-micro new example
-
-# set to use server
-micro env set server
-
-# run the service
-micro run example
-
-# list services
-micro list services
-
-# call a service
-micro call go.micro.service.example Example.Call '{"name": "John"}'
-```
-
 ## Usage
 
 See all the options
