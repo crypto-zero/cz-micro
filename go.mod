@@ -3,7 +3,7 @@ module c-z.dev/micro
 go 1.18
 
 require (
-	c-z.dev/go-micro v0.0.0-20220402095410-a220f9a9b98c
+	c-z.dev/go-micro v0.0.0-20220406173716-8298b54eb1b4
 	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
 	github.com/dustin/go-humanize v1.0.0
 	github.com/fsnotify/fsnotify v1.5.1
@@ -13,13 +13,10 @@ require (
 	github.com/serenize/snaker v0.0.0-20201027110005-a7ad2135616e
 	github.com/stretchr/testify v1.7.1
 	github.com/urfave/cli/v2 v2.4.0
-	github.com/xlab/treeprint v1.1.0
 	golang.org/x/crypto v0.0.0-20220321153916-2c7772ba3064
 	golang.org/x/net v0.0.0-20220325170049-de3da57026de
 	google.golang.org/protobuf v1.28.0
 )
-
-replace c-z.dev/go-micro => ../cz-go-micro
 
 require (
 	github.com/bitly/go-simplejson v0.5.1-0.20200416141419-39a59b1b2866 // indirect
