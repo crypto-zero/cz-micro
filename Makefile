@@ -10,10 +10,8 @@ IMAGE_TAG=$(GIT_TAG)-$(GIT_COMMIT)
 
 all: build
 
-vendor:
-	go mod vendor
-
 build:
+	go generate
 	go build -a -installsuffix cgo -ldflags "-s -w ${LDFLAGS}" -o $(NAME)
 
 docker:

@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package go.micro.debug.stats;
+option go_package = "c-z.dev/micro/debug/stats/proto";
 
 // Stats retrieves a snapshot of the Debug.Stats data for services
 service Stats {
