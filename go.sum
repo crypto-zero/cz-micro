@@ -1,5 +1,5 @@
-c-z.dev/go-micro v0.0.0-20220406173716-8298b54eb1b4 h1:bb/t7Wh4J5XSq58J+gshMBeTuhXK1PNtgiS1Gdlke+Y=
-c-z.dev/go-micro v0.0.0-20220406173716-8298b54eb1b4/go.mod h1:fmGGY1k16C7KmL1lMmuNQhjycK6O5NCGT3F69ciCSZ0=
+c-z.dev/go-micro v0.0.0-20220408073554-1626fef0b8ad h1:1E7OnYkpumj1Dqg8+sT9Ka+sldU/r0dtzg82j4+whhc=
+c-z.dev/go-micro v0.0.0-20220408073554-1626fef0b8ad/go.mod h1:M465V9S+WiYJw64yOtTagJl4OBUdz94TjEbmHQUayS0=
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
