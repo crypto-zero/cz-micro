@@ -10,8 +10,10 @@ IMAGE_TAG=$(GIT_TAG)-$(GIT_COMMIT)
 
 all: build
 
-build:
+generate:
 	go generate
+
+build:
 	go build -a -installsuffix cgo -ldflags "-s -w ${LDFLAGS}" -o $(NAME)
 
 docker:
@@ -29,4 +31,4 @@ test: vet
 clean:
 	rm -rf ./micro
 
-.PHONY: build clean vet test docker
+.PHONY: generate build clean vet test docker
