@@ -10,6 +10,7 @@ import (
 	bmem "c-z.dev/go-micro/broker/memory"
 	"c-z.dev/go-micro/client"
 	mucli "c-z.dev/go-micro/client"
+	cgrpc "c-z.dev/go-micro/client/grpc"
 	"c-z.dev/go-micro/config/cmd"
 	log "c-z.dev/go-micro/logger"
 	"c-z.dev/go-micro/proxy"
@@ -163,6 +164,12 @@ func Run(ctx *cli.Context, srvOpts ...micro.Option) {
 
 		serverOpts = append(serverOpts, server.WithRouter(p))
 		srv = server.NewServer(serverOpts...)
+	case "grpc":
+		popts = append(popts, proxy.WithClient(cgrpc.NewClient()))
+		p = mucp.NewProxy(popts...)
+
+		serverOpts = append(serverOpts, server.WithRouter(p))
+		srv = sgrpc.NewServer(serverOpts...)
 	default:
 		p = mucp.NewProxy(popts...)
 
