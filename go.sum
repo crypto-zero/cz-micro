@@ -1,5 +1,5 @@
-c-z.dev/go-micro v0.0.0-20240111170734-65c243ccae22 h1:Q9mzKq8o4SP6HKEu6C4VDjVTXDVFur68cOpchSOby/U=
-c-z.dev/go-micro v0.0.0-20240111170734-65c243ccae22/go.mod h1:N3KtkYoUrrkvOgT5Q/uWnWQ39qnBj5Gwg51SE1Zdtas=
+c-z.dev/go-micro v0.0.0-20240111171249-797bca6bf01a h1:5oG5kzu6Dcvs1pE7vf6NCtw6xof6R1T3BXElVE18aUI=
+c-z.dev/go-micro v0.0.0-20240111171249-797bca6bf01a/go.mod h1:N3KtkYoUrrkvOgT5Q/uWnWQ39qnBj5Gwg51SE1Zdtas=
 dario.cat/mergo v1.0.0 h1:AGCNq9Evsj31mOgNPcLyXc+4PNABt905YmuqPYYpBWk=
 dario.cat/mergo v1.0.0/go.mod h1:uNxQE+84aUszobStD9th8a29P2fMDhsBdgRYvZOxGmk=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
