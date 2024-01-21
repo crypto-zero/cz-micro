@@ -3,7 +3,7 @@ module c-z.dev/micro
 go 1.18
 
 require (
-	c-z.dev/go-micro v0.0.0-20240121125700-23bf2d9c4ab6
+	c-z.dev/go-micro v0.0.0-20240121131326-79cd53a1c7e3
 	github.com/chzyer/readline v1.5.1
 	github.com/dustin/go-humanize v1.0.1
 	github.com/fsnotify/fsnotify v1.7.0
